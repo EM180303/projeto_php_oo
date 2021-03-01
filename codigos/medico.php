@@ -23,6 +23,12 @@ public function getAnos_Prof(){
     $this->anos_prof;
 }
 
+public function __construct($especialidade, $anos_prof)
+{
+    $this->especialidade = $especialidade;
+    $this->anos_prof = $anos_prof;
+}
+
 }
 
 ?>

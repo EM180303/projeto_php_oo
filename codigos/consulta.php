@@ -50,6 +50,15 @@ public function getMedico(){
     $this->medico;
 }
 
+public function __construct($paciente, $data, $hora, $motivo, $medico)
+{
+    $this->paciente = $paciente;
+    $this->data = $data;
+    $this->hora = $hora;
+    $this->motivo = $motivo;
+    $this->medico = $medico;
+}
+
 }
 
 ?>

@@ -23,6 +23,12 @@ public function getEstrelas(){
     $this->estrelas;
 }
 
+public function __construct($avaliacao, $estrelas)
+{
+    $this->avaliacao = $avaliacao;
+    $this->estrelas = $estrelas;
+}
+
 }
 
 ?>

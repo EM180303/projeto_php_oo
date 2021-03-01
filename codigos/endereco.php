@@ -77,6 +77,18 @@ public function getUf(){
     $this->uf;
 }
 
+public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $complemento, $estado, $uf)
+{
+    $this->cep = $cep;
+    $this->rua = $rua;
+    $this->bairro = $bairro;
+    $this->cidade = $cidade;
+    $this->numero_resi = $numero_resi;
+    $this->complemento = $complemento;
+    $this->estado = $estado;
+    $this->uf = $uf;
+}
+
 }
 
 ?>

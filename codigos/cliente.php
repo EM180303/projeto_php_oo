@@ -33,6 +33,13 @@ public function getConsulta(){
     $this->consulta;
 }
 
+public function __construct($plano, $numero_consultas, $consulta)
+{
+    $this->plano = $plano;
+    $this->numero_consultas = $numero_consultas;
+    $this->consulta = $consulta;
+}
+
 }
 
 ?>

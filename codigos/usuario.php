@@ -1,5 +1,7 @@
 <?php
 
+require "endereco.php" ;
+
 class Usuario{
 
 public $nome;
@@ -57,6 +59,16 @@ public function getTelefone(){
 
 public function getIdade(){
     $this->idade;
+}
+
+public function __construct($nome, $email, $senha, $idade, $telefone = null){
+
+$this->nome = $nome;
+$this->email = $email;
+$this->senha = $senha;
+$this->idade = $idade;
+$this->telefone = $telefone;
+
 }
     
 }
