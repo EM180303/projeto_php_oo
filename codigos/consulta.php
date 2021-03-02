@@ -6,7 +6,7 @@ protected $data;
 protected $hora;
 protected $motivo;
 protected $medico;
-protected $paciente;
+protected $cliente;
     
 //set
 public function setData($data){
@@ -25,13 +25,13 @@ public function setMedico($medico){
     $this->medico = $medico;
 }
 
-public function setPaciente($paciente){
-    $this->paciente = $paciente;
+public function setCliente($cliente){
+    $this->cliente = $cliente;
 }
 
 //get
-public function getPaciente(){
-    $this->paciente;
+public function getCliente(){
+    $this->cliente;
 }
 
 public function getData(){
@@ -50,9 +50,9 @@ public function getMedico(){
     $this->medico;
 }
 
-public function __construct($paciente, $data, $hora, $motivo, $medico)
+public function __construct($cliente, $data, $hora, $motivo, $medico)
 {
-    $this->paciente = $paciente;
+    $this->cliente = $cliente;
     $this->data = $data;
     $this->hora = $hora;
     $this->motivo = $motivo;

@@ -2,31 +2,43 @@
 
 class Avaliacao{
 
-public $avaliacao;
+public $media;
 public $estrelas;
+public $comentario;
 
 //set
-public function setAvaliacao($avaliacao){
-    $this->avaliacao = $avaliacao;
+public function setMedia($media){
+    $this->media = $media;
 }
 
 public function setEstrelas($estrelas){
     $this->estrelas = $estrelas;
 }
 
+public function setComentario($comentario){
+    $this->comentario = $comentario;
+   
+}
+
 //get
-public function getAvaliacao(){
-    $this->avaliacao;
+public function getMedia(){
+    $this->media;
 }
 
 public function getEstrelas(){
     $this->estrelas;
 }
 
-public function __construct($avaliacao, $estrelas)
+public function getComentario(){
+    $this->comentario;
+   
+}
+
+public function __construct($media, $estrelas, $comentario = null)
 {
-    $this->avaliacao = $avaliacao;
+    $this->media = $media;
     $this->estrelas = $estrelas;
+    $this->comentario = $comentario;
 }
 
 }

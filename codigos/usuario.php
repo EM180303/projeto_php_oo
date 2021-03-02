@@ -4,7 +4,7 @@ require "endereco.php" ;
 
 class Usuario{
 
-public $nome;
+public $nome_completo;
 public $email;
 private $senha;
 protected $endereço;
@@ -12,8 +12,8 @@ protected $telefone;
 public $idade;
 
 //set
-public function setNome($nome){
-    $this->nome = $nome;
+public function setNome_c($nome_completo){
+    $this->nome_completo = $nome_completo;
 }
 
 public function setEmail($email){
@@ -37,8 +37,8 @@ public function setIdade($idade){
 }
 
 //get
-public function getNome(){
-    $this->nome;
+public function getNome_c(){
+    $this->nome_completo;
 }
 
 public function getEmail(){
@@ -61,9 +61,9 @@ public function getIdade(){
     $this->idade;
 }
 
-public function __construct($nome, $email, $senha, $idade, $telefone = null){
+public function __construct($nome_completo, $email, $senha, $idade, $telefone = null){
 
-$this->nome = $nome;
+$this->nome = $nome_completo;
 $this->email = $email;
 $this->senha = $senha;
 $this->idade = $idade;
