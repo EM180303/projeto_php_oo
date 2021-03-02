@@ -49,7 +49,7 @@ public function getNum_consultas(){
 }
 
 
-public function __construct($especialidade, $anos_prof, $dias_q_trabalha, $consulta = null, $num_consultas)
+public function __construct($especialidade, $anos_prof, $dias_q_trabalha, $num_consultas, $consulta = null)
 {
     $this->especialidade = $especialidade;
     $this->anos_prof = $anos_prof;
