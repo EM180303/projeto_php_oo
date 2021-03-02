@@ -1,6 +1,6 @@
 <?php
 
-class Endereço{
+class Endereco{
 
 protected $cep;
 protected $rua;
@@ -77,7 +77,7 @@ public function getUf(){
     $this->uf;
 }
 
-public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $complemento, $estado, $uf)
+public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $estado, $uf,  $complemento = null)
 {
     $this->cep = $cep;
     $this->rua = $rua;
@@ -87,6 +87,10 @@ public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $complem
     $this->complemento = $complemento;
     $this->estado = $estado;
     $this->uf = $uf;
+}
+
+public function ResumoEndereco(){
+    return "CEP: $this->cep <br> Rua: $this->rua <br> Residênsia: $this->numero_resi - $this->complemento <br> Bairro: $this->bairro <br> Cidade: $this->cidade <br> Estado: $this->estado <br> País: $this->uf <br>";
 }
 
 }

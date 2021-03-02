@@ -7,9 +7,11 @@ class Usuario{
 public $nome_completo;
 public $email;
 private $senha;
-protected $endereço;
+protected $endereco;
 protected $telefone;
 public $idade;
+public $veri;
+public $conf;
 
 //set
 public function setNome_c($nome_completo){
@@ -36,41 +38,84 @@ public function setIdade($idade){
     $this->idade = $idade;
 }
 
+public function setVeri($veri){
+    $this->veri = $veri;
+}
+
+public function setConf($conf){
+    $this->conf = $conf;
+}
+
 //get
-public function getNome_c(){
-    $this->nome_completo;
+public function getNome_completo(){
+    return $this->nome_completo;
 }
 
 public function getEmail(){
-    $this->email;
+    return $this->email;
 }
 
 private function getSenha(){
-    $this->senha;
+    return $this->senha;
 }
 
 public function getEndereco(){
-    $this->endereco;
+    return $this->endereco;
 }
 
 public function getTelefone(){
-    $this->telefone;
+    return $this->telefone;
 }
 
 public function getIdade(){
-    $this->idade;
+    return $this->idade;
 }
 
-public function __construct($nome_completo, $email, $senha, $idade, $telefone = null){
+public function getVeri(){
+    return $this->veri;
+}
 
-$this->nome = $nome_completo;
+public function getConf(){
+    return $this->conf;
+}
+
+//construtor
+public function __construct($nome_completo, $email, $senha, $idade,$telefone = null){
+
+$this->nome_completo = $nome_completo;
 $this->email = $email;
 $this->senha = $senha;
 $this->idade = $idade;
 $this->telefone = $telefone;
 
 }
+
+public function Exibir(){
+    return "Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Idade: $this->idade <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
+}
+
+public function Confirme($veri){
+if($veri == "sim"){
+    $this->conf = true;
+}else{
+    $this->conf = false;
+}
+}
+
+public function Validado($conf){
+if($conf == true){
+    return "Dados validados";
+}else{
+    return "Corrija seus dados";
+}
+}
     
 }
 
+$objusario = new Usuario("Edu", "edu@gmail.com", "1803", 17, 81985624197);
+$objendereco = new Endereco("54240-030", "Rua 04", "Curado I", "Jaboatão", 75, "PE", "Brasil", "C");
+$objusario->setEndereco($objendereco->ResumoEndereco());
+echo $objusario->Exibir();
+$objusario->Confirme("sim");
+echo $objusario->Validado($objusario->getConf());
 ?>
