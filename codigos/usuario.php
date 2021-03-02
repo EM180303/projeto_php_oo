@@ -9,7 +9,7 @@ public $email;
 private $senha;
 protected $endereco;
 protected $telefone;
-public $idade;
+public $nascimento;
 public $veri;
 public $conf;
 
@@ -34,8 +34,8 @@ public function setTelefone($telefone){
     $this->telefone = $telefone;
 }
 
-public function setIdade($idade){
-    $this->idade = $idade;
+public function setnascimento($nascimento){
+    $this->nascimento = $nascimento;
 }
 
 public function setVeri($veri){
@@ -67,8 +67,8 @@ public function getTelefone(){
     return $this->telefone;
 }
 
-public function getIdade(){
-    return $this->idade;
+public function getnascimento(){
+    return $this->nascimento;
 }
 
 public function getVeri(){
@@ -80,19 +80,19 @@ public function getConf(){
 }
 
 //construtor
-public function __construct($nome_completo, $email, $senha, $idade, $veri, $telefone = null){
+public function __construct($nome_completo, $email, $senha, $nascimento, $veri, $telefone = null){
 
 $this->nome_completo = $nome_completo;
 $this->email = $email;
 $this->senha = $senha;
-$this->idade = $idade;
+$this->nascimento = $nascimento;
 $this->telefone = $telefone;
 $this->veri = $veri;
 
 }
 
 public function Exibir(){
-    return "Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Idade: $this->idade <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
+    return "Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Data de nascimento: $this->nascimento <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
 }
 
 public function Confirme($veri){
@@ -113,7 +113,7 @@ if($conf == true){
     
 }
 
-$objusario = new Usuario("Edu", "edu@gmail.com", "1803", 17, "sim", 81985624197);
+$objusario = new Usuario("Edu", "edu@gmail.com", "1803", "18/03/2003", "sim", 81985624197);
 $objendereco = new Endereco("54240-030", "Rua 04", "Curado I", "Jaboatão", 75, "PE", "Brasil", "C");
 $objusario->setEndereco($objendereco->ResumoEndereco());
 echo $objusario->Exibir();
