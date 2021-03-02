@@ -46,35 +46,35 @@ public function setUf($uf){
 
 //get
 public function getCep(){
-    $this->cep;
+    return $this->cep;
 }
 
 public function getRua(){
-    $this->rua;
+    return $this->rua;
 }
 
 public function getBairro(){
-    $this->bairro;
+    return $this->bairro;
 }
 
 public function getNumero_R(){
-    $this->numero_resi;
+    return $this->numero_resi;
 }
 
 public function getComplemento(){
-    $this->complemento;
+    return $this->complemento;
 }
 
 public function getCidade(){
-    $this->cidade;
+    return $this->cidade;
 }
 
 public function getEstado(){
-    $this->estado;
+    return $this->estado;
 }
 
 public function getUf(){
-    $this->uf;
+   return $this->uf;
 }
 
 public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $estado, $uf,  $complemento = null)
@@ -91,6 +91,12 @@ public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $estado,
 
 public function ResumoEndereco(){
     return "CEP: $this->cep <br> Rua: $this->rua <br> Residênsia: $this->numero_resi - $this->complemento <br> Bairro: $this->bairro <br> Cidade: $this->cidade <br> Estado: $this->estado <br> País: $this->uf <br>";
+}
+
+public function Distancia($uf, $estado){
+    if(($uf != "Brasil") or ($estado != "PE")){
+        echo "Aconcelhamos que procure uma das nossas clinicas mais proximas de você!";
+    }
 }
 
 }

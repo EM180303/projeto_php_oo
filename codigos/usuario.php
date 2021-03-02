@@ -105,9 +105,9 @@ if($veri == "sim"){
 
 public function Validado($conf){
 if($conf == true){
-    return "Dados validados";
+    return "Dados validados <br>";
 }else{
-    return "Corrija seus dados";
+    return "Corrija seus dados <br>";
 }
 }
     
@@ -119,4 +119,5 @@ $objusario->setEndereco($objendereco->ResumoEndereco());
 echo $objusario->Exibir();
 $objusario->Confirme($objusario->getVeri());
 echo $objusario->Validado($objusario->getConf());
+$objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
 ?>
