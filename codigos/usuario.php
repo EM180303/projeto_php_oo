@@ -80,13 +80,14 @@ public function getConf(){
 }
 
 //construtor
-public function __construct($nome_completo, $email, $senha, $idade,$telefone = null){
+public function __construct($nome_completo, $email, $senha, $idade, $veri, $telefone = null){
 
 $this->nome_completo = $nome_completo;
 $this->email = $email;
 $this->senha = $senha;
 $this->idade = $idade;
 $this->telefone = $telefone;
+$this->veri = $veri;
 
 }
 
@@ -112,10 +113,10 @@ if($conf == true){
     
 }
 
-$objusario = new Usuario("Edu", "edu@gmail.com", "1803", 17, 81985624197);
+$objusario = new Usuario("Edu", "edu@gmail.com", "1803", 17, "sim", 81985624197);
 $objendereco = new Endereco("54240-030", "Rua 04", "Curado I", "Jaboatão", 75, "PE", "Brasil", "C");
 $objusario->setEndereco($objendereco->ResumoEndereco());
 echo $objusario->Exibir();
-$objusario->Confirme("sim");
+$objusario->Confirme($objusario->getVeri());
 echo $objusario->Validado($objusario->getConf());
 ?>
