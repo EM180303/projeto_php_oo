@@ -23,16 +23,16 @@ public function setDesconto($desconto){
 
 //get
 public function getCont(){
-    $this->cont;
+    return $this->cont;
    
 }
 
 public function getPremio(){
-    $this->premio;
+    return $this->premio;
 }
 
 public function getDesconto(){
-    $this->desconto;
+    return $this->desconto;
 }
 
 public function __construct($cont, $premio, $desconto = null)

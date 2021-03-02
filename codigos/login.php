@@ -21,15 +21,15 @@ public function setValidacao($validacao){
 
 //get
 public function getEmail(){
-    $this->email;
+    return $this->email;
 }
 
 public function getSenha(){
-    $this->senha;
+    return $this->senha;
 }
 
 public function getValidacao(){
-    $this->validacao;
+    return $this->validacao;
 }
 
 //construtor
@@ -39,7 +39,26 @@ public function __construct($email, $senha, $validacao)
     $this->senha = $senha;
     $this->validacao = $validacao;
 }
+/*Função para o bd
+public function LoginOk($email, $senha){
+    if(($email == email do bd) and ($senha == senha do bd)){
+        $this->validacao = true;
+    }
+}
+*/
+
+public function Validar($validacao){
+    if($validacao == true){
+        return "Login aprovado";
+    }
+    else{
+        return "Falha";
+    }
+}
 
 }
+
+$objlogin = new Login("edu@gmail.com", "1803", true);
+echo $objlogin->Validar($objlogin->getValidacao());
 
 ?>

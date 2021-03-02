@@ -22,15 +22,15 @@ public function setComentario($comentario){
 
 //get
 public function getMedia(){
-    $this->media;
+    return $this->media;
 }
 
 public function getEstrelas(){
-    $this->estrelas;
+    return $this->estrelas;
 }
 
 public function getComentario(){
-    $this->comentario;
+    return $this->comentario;
    
 }
 

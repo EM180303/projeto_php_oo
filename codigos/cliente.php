@@ -26,19 +26,19 @@ public function setNum_consultas($num_consultas){
 
 //get
 public function getPlano(){
-    $this->plano;
+    return $this->plano;
 }
 
 public function getApelido(){
-    $this->apelido;
+    return $this->apelido;
 }
 
 public function getConsulta(){
-    $this->consulta;
+    return $this->consulta;
 }
 
 public function getNum_consultas(){
-    $this->num_consultas;
+    return $this->num_consultas;
 }
 
 public function __construct($plano, $apelido, $consulta = null, $num_consultas)

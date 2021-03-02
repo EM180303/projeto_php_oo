@@ -31,23 +31,23 @@ public function setCliente($cliente){
 
 //get
 public function getCliente(){
-    $this->cliente;
+    return $this->cliente;
 }
 
 public function getData(){
-    $this->data;
+    return $this->data;
 }
 
 public function getHora(){
-    $this->hora;
+    return $this->hora;
 }
 
 public function getMotivo(){
-    $this->motivo;
+    return $this->motivo;
 }
 
 public function getMedico(){
-    $this->medico;
+    return $this->medico;
 }
 
 public function __construct($cliente, $data, $hora, $motivo, $medico)

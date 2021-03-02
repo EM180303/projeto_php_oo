@@ -33,19 +33,19 @@ public function setNum_consultas($num_consultas){
 
 //get
 public function getEspecialidade(){
-    $this->especialidade;
+    return $this->especialidade;
 }
 
 public function getAnos_Prof(){
-    $this->anos_prof;
+    return $this->anos_prof;
 }
 
 public function getConsulta(){
-    $this->consulta;
+    return $this->consulta;
 }
 
 public function getNum_consultas(){
-    $this->num_consultas;
+   return $this->num_consultas;
 }
 
 
