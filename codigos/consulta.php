@@ -84,17 +84,17 @@ public function Exibir(){
 
 public function PacienteNoLocal($pergunta){
     echo "<br>";
-    echo"O paciente já chegou? ";
+    echo"Já sabe onde fica a clínica? ";
     if($pergunta == "sim"){
         echo"$pergunta";
     }else{
         echo"$pergunta";
-        echo"<br> Ligue para ele: $this->telefone";
+        echo"<br> Ligue para lá: $this->telefone";
     }
 }
 
 }
-$objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dor no joelho", "Dr. Dráuzio", "sim", 81985624197);
+$objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dor no joelho", "Dr. Dráuzio", "sim", 34522035);
 echo $objconsulta->Exibir();
 $objconsulta->PacienteNoLocal($objconsulta->getPergunta());
 
