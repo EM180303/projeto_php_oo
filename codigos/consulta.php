@@ -67,7 +67,7 @@ public function getTelefone(){
     return $this->telefone;
 }
 
-public function __construct($cliente, $data, $hora, $motivo, $medico, $pergunta, $telefone = null)
+public function __construct($cliente, $data, $hora, $motivo, $medico, $pergunta, $telefone)
 {
     $this->cliente = $cliente;
     $this->data = $data;
