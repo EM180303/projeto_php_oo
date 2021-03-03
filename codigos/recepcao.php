@@ -39,7 +39,7 @@ public function __construct($consultas, $paciente, $medico = null)
 {
     $this->paciente = $paciente;
     $this->consultas = $consultas;
-    $this->medico = $medico;
+    $this->medico = $medico; 
     
 }
 

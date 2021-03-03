@@ -56,9 +56,15 @@ public function Validar($validacao){
     }
 }
 
+public function Exibir(){
+    return "Email: $this->email <br> Senha: $this->senha";
+}
+
 }
 
 $objlogin = new Login("edu@gmail.com", "1803", true);
+echo $objlogin->Exibir();
+echo "<br>";
 echo $objlogin->Validar($objlogin->getValidacao());
 
 ?>

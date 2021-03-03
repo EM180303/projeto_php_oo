@@ -36,19 +36,26 @@ public function getApelido(){
 public function getConsulta(){
     return $this->consulta;
 }
-
+ 
 public function getNum_consultas(){
     return $this->num_consultas;
 }
 
-public function __construct($plano, $apelido, $consulta = null, $num_consultas)
+public function __construct($plano, $apelido, $num_consultas, $consulta = null)
 {
     $this->plano = $plano;
-    $this->numero_consultas = $apelido;
+    $this->apelido = $apelido;
     $this->consulta = $consulta;
     $this->num_consultas = $num_consultas;
 }
 
+public function Exibir(){
+    return "Plano: $this->plano <br> Nº Consultas: $this->num_consultas <br> Nome: $this->apelido";
 }
+
+}
+
+$objcliente = new Cliente("Saude Plus", "Edu", "0");
+echo $objcliente->Exibir();
 
 ?>

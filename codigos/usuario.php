@@ -113,7 +113,7 @@ if($conf == true){
     
 }
 
-$objusario = new Usuario("Edu", "edu@gmail.com", "1803", "18/03/2003", "sim", 81985624197);
+$objusario = new Usuario("Eduardo", "edu@gmail.com", "1803", "18/03/2003", "sim", 81985624197);
 $objendereco = new Endereco("54240-030", "Rua 04", "Curado I", "Jaboatão", 75, "PE", "Brasil", "C");
 $objusario->setEndereco($objendereco->ResumoEndereco());
 echo $objusario->Exibir();

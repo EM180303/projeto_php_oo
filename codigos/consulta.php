@@ -55,7 +55,7 @@ public function __construct($cliente, $data, $hora, $motivo, $medico)
     $this->cliente = $cliente;
     $this->data = $data;
     $this->hora = $hora;
-    $this->motivo = $motivo;
+    $this->motivo = $motivo; 
     $this->medico = $medico;
 }
 
