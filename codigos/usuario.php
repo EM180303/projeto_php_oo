@@ -80,7 +80,7 @@ public function getConf(){
 }
 
 //construtor
-public function __construct($nome_completo, $email, $senha, $nascimento, $veri, $telefone = null){
+public function __construct($nome_completo, $email, $senha, $nascimento, $veri, $telefone){
 
 $this->nome_completo = $nome_completo;
 $this->email = $email;
