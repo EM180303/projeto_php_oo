@@ -59,9 +59,23 @@ public function __construct($especialidade, $anos_prof, $dias_q_trabalha, $drt, 
 }
 
 public function Exibir(){
-    return "Área de atuação: $this->especialidade <br> Anos de profissão: $this->anos_Prof <br> Dia(s) que trabalha: $this->dias_q_trabalha <br> "
+    return "Área de atuação: $this->especialidade <br> Anos de profissão: $this->anos_prof <br> Dia(s) que trabalha: $this->dias_q_trabalha <br> Registro: $this->drt";
 }
 
+//vendo se o drt consta em nossos arquivos
+public function ValidDrt($drt){
+    $veri = true; //simulando verificação no bd
+    if($veri){
+        echo"Drt confirmado";
+    }else{
+        echo"Drt falso";
+    }
 }
+
+} 
+$objmedico = new Medico ("Clínico geral", 25, "Segunda", 541865);
+echo $objmedico->Exibir();
+echo"<br>";
+$objmedico->ValidDrt($objmedico->getDrt());
 
 ?>
