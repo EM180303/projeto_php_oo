@@ -5,6 +5,8 @@ class Avaliacao{
 public $media;
 public $estrelas;
 public $comentario;
+public $total;
+public $totalAvaliacao;
 
 //set
 public function setMedia($media){
@@ -17,7 +19,14 @@ public function setEstrelas($estrelas){
 
 public function setComentario($comentario){
     $this->comentario = $comentario;
-   
+}
+
+public function setTotal($total){
+    $this->total = $total;
+}
+
+public function setTotalAvaliacao($totalAvaliacao){
+    $this->totalAvaliacao = $totalAvaliacao;
 }
 
 //get
@@ -31,16 +40,54 @@ public function getEstrelas(){
 
 public function getComentario(){
     return $this->comentario;
-   
 }
 
-public function __construct($media, $estrelas, $comentario = null)
+public function getTotal(){
+    return $this->total;
+}
+
+public function getTotalAvaliacao(){
+    return $this->totalAvaliacao;
+}
+
+
+public function __construct($estrelas, $total, $totalAvaliacao, $comentario = null)
 {
-    $this->media = $media;
+    
     $this->estrelas = $estrelas;
     $this->comentario = $comentario;
+    $this->total = $total;
+    $this->totalAvaliacao = $totalAvaliacao;
+    
+}
+
+public function atribuindoTotalAvaliacao($totalAvaliacao){
+    $totalAvaliacao +=1;
+    return $this->totalAvaliacao = $totalAvaliacao;
+}
+
+public function atribuindoEstrela($estrela, $total){
+    $total += $estrela;
+    return $this->total = $total;
+}
+
+public function calcMedia($total, $totalAvaliacao){
+    $this->media = $total / $totalAvaliacao;
+    return $this->media;
+}
+
+public function Exibir(){
+    return "Sua avaliação: $this->estrelas <br> Média de avaliações: $this->media <br> Seu comentário: $this->comentario";
 }
 
 }
 
+$objavaliacao = new Avaliacao(5, 13, 3, "Muito bom");
+$objavaliacao->atribuindoEstrela($objavaliacao->getEstrelas(),$objavaliacao->getTotal());
+
+$objavaliacao->atribuindototalAvaliacao($objavaliacao->getTotalAvaliacao());
+
+$objavaliacao->calcMedia($objavaliacao->getTotal(), $objavaliacao->getTotalAvaliacao());
+
+echo $objavaliacao->Exibir();
 ?>
