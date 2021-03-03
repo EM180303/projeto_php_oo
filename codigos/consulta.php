@@ -7,7 +7,6 @@ protected $motivo;
 protected $medico;
 protected $cliente;
 public $pergunta;
-public $telefone;
     
 //set
 public function setData($data){
@@ -32,10 +31,6 @@ public function setCliente($cliente){
 
 public function setPergunta($pergunta){
     $this->pergunta = $pergunta;
-}
-
-public function setTelefone($telefone){
-    $this->telefone = $telefone;
 }
 
 //get
@@ -63,18 +58,13 @@ public function getPergunta(){
     return $this->pergunta;
 }
 
-public function getTelefone(){
-    return $this->telefone;
-}
-
-public function __construct($cliente, $data, $hora, $motivo, $medico, $pergunta, $telefone)
+public function __construct($cliente, $data, $hora, $motivo, $medico, $pergunta)
 {
     $this->cliente = $cliente;
     $this->data = $data;
     $this->hora = $hora;
     $this->motivo = $motivo; 
     $this->medico = $medico;
-    $this->telefone = $telefone;
     $this->pergunta = $pergunta;
 }
 
@@ -82,20 +72,21 @@ public function Exibir(){
     return "Nome do paciente: $this->cliente <br> Data: $this->data <br> Hora: $this->hora <br> Motivo: $this->motivo <br> Medico: $this->medico";
 }
 
-public function PacienteNoLocal($pergunta){
+public function PacienteLocal($pergunta){
     echo "<br>";
-    echo"Já sabe onde fica a clínica? ";
+    echo"Consulta confrimada? ";
     if($pergunta == "sim"){
+        $veri = true;
         echo"$pergunta";
     }else{
+        $veri = false;
         echo"$pergunta";
-        echo"<br> Ligue para lá: $this->telefone";
     }
 }
 
 }
-$objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dor no joelho", "Dr. Dráuzio", "sim", 34522035);
+$objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dor no joelho", "Dr. Dráuzio", "sim");
 echo $objconsulta->Exibir();
-$objconsulta->PacienteNoLocal($objconsulta->getPergunta());
+$objconsulta->PacienteLocal($objconsulta->getPergunta());
 
 ?>

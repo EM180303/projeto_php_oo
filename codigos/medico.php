@@ -6,7 +6,7 @@ public $especialidade;
 public $anos_prof;
 public $dias_q_trabalha;
 public $consulta;
-public $num_consultas;
+public $drt;
 
 
 //set
@@ -27,8 +27,8 @@ public function setConsulta($consulta){
 }
 
 
-public function setNum_consultas($num_consultas){
-    $this->num_consultas = $num_consultas;
+public function setDrt($drt){
+    $this->drt = $drt;
 }
 
 //get
@@ -44,18 +44,22 @@ public function getConsulta(){
     return $this->consulta;
 }
 
-public function getNum_consultas(){
-   return $this->num_consultas;
+public function getDrt(){
+   return $this->drt;
 }
 
 
-public function __construct($especialidade, $anos_prof, $dias_q_trabalha, $num_consultas, $consulta = null)
+public function __construct($especialidade, $anos_prof, $dias_q_trabalha, $drt, $consulta = null)
 {
     $this->especialidade = $especialidade;
     $this->anos_prof = $anos_prof;
     $this->dias_q_trabalha = $dias_q_trabalha;
     $this->consulta = $consulta;
-    $this->num_consultas = $num_consultas;
+    $this->drt = $drt;
+}
+
+public function Exibir(){
+    return "Área de atuação: $this->especialidade <br> Anos de profissão: $this->anos_Prof <br> Dia(s) que trabalha: $this->dias_q_trabalha <br> "
 }
 
 }
