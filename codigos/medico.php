@@ -25,7 +25,7 @@ public function getDias_q_trabalha($dias_q_trabalha){
 public function setConsulta($consulta){
     $this->consulta = $consulta;
 }
-
+ 
 
 public function setDrt($drt){
     $this->drt = $drt;

@@ -84,7 +84,7 @@ public function __construct($nome_completo, $email, $senha, $nascimento, $veri, 
 
 $this->nome_completo = $nome_completo;
 $this->email = $email;
-$this->senha = $senha;
+$this->senha = $senha; 
 $this->nascimento = $nascimento;
 $this->telefone = $telefone;
 $this->veri = $veri;

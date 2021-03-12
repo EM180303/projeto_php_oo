@@ -3,7 +3,6 @@ class Consulta{
 
 protected $data;
 protected $hora;
-protected $motivo;
 protected $medico;
 protected $cliente;
 public $pergunta;
@@ -15,10 +14,6 @@ public function setData($data){
 
 public function setHora($hora){
     $this->hora = $hora;
-}
-
-public function setMotivo($motivo){
-    $this->motivo = $motivo;
 }
 
 public function setMedico($medico){
@@ -46,10 +41,6 @@ public function getHora(){
     return $this->hora;
 }
 
-public function getMotivo(){
-    return $this->motivo;
-}
-
 public function getMedico(){
     return $this->medico;
 }
@@ -58,18 +49,17 @@ public function getPergunta(){
     return $this->pergunta;
 }
 
-public function __construct($cliente, $data, $hora, $motivo, $medico, $pergunta)
+public function __construct($cliente, $data, $hora, $medico, $pergunta)
 {
     $this->cliente = $cliente;
     $this->data = $data;
-    $this->hora = $hora;
-    $this->motivo = $motivo; 
+    $this->hora = $hora; 
     $this->medico = $medico;
     $this->pergunta = $pergunta;
 }
 
 public function Exibir(){
-    return "Nome do paciente: $this->cliente <br> Data: $this->data <br> Hora: $this->hora <br> Motivo: $this->motivo <br> Medico: $this->medico";
+    return "Nome do paciente: $this->cliente <br> Data: $this->data <br> Hora: $this->hora <br> Medico: $this->medico";
 }
 
 public function PacienteLocal($pergunta){
@@ -85,7 +75,7 @@ public function PacienteLocal($pergunta){
 }
 
 }
-$objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dor no joelho", "Dr. Dráuzio", "sim");
+$objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dr. Dráuzio", "sim");
 echo $objconsulta->Exibir();
 $objconsulta->PacienteLocal($objconsulta->getPergunta());
 

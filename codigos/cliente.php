@@ -73,7 +73,7 @@ public function Exibir(){
 }
 
 public function Conf($conf){
-    $this->valid = false;
+    $this->valid = false; 
     if($conf == "sim"){
         $this->valid = true;
     }

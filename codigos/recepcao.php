@@ -92,7 +92,7 @@ public function PacienteNoLocal($pergunta){
     }
 }
 
-public function medicoNoLocal($pergunta2){
+public function medicoNoLocal($pergunta2){ 
     echo "<br>";
     echo"O medico $this->medico já chegou? ";
     if($pergunta2 == "sim"){
