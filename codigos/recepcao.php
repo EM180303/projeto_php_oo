@@ -1,6 +1,7 @@
 <?php
+require "usuario.php";
 
-class Recpecao{
+class Recpecao extends Usuario{
 
 //atributos
 public $consultas;
@@ -105,8 +106,16 @@ public function medicoNoLocal($pergunta2){
 
 }
 
+$objusario = new Usuario("Cremildo", "recepcao1@gmail.com", "2222", "11/01/2000", "sim", "Recepção");
+$objendereco = new Endereco("54450-010", "Avenida Brasil", "Boa Vista", "Recife", 2047, "PE", "Brasil", "Ap 5");
+$objusario->setEndereco($objendereco->ResumoEndereco());
+echo $objusario->Exibir();
+$objusario->Confirme($objusario->getVeri());
+echo $objusario->Validado($objusario->getConf());
+$objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
+echo "<hr>";
 $objrecepcao = new Recpecao("Eduardo", "Dr. Dráuzio", "sim", "não", 81987027519);
 $objrecepcao->medicoNoLocal($objrecepcao->getPergunta2());
-$objrecepcao->PacienteNoLocal($objrecepcao->getPergunta())
+$objrecepcao->PacienteNoLocal($objrecepcao->getPergunta());
 
 ?>

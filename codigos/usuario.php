@@ -12,6 +12,7 @@ protected $telefone;
 public $nascimento;
 public $veri;
 public $conf;
+public $tipo;
 
 //set
 public function setNome_c($nome_completo){
@@ -44,6 +45,10 @@ public function setVeri($veri){
 
 public function setConf($conf){
     $this->conf = $conf;
+}
+
+public function setTipo($tipo){
+    $this->tipo = $tipo;
 }
 
 //get
@@ -79,8 +84,12 @@ public function getConf(){
     return $this->conf;
 }
 
+public function getTipo(){
+    return $this->tipo;
+}
+
 //construtor
-public function __construct($nome_completo, $email, $senha, $nascimento, $veri, $telefone){
+public function __construct($nome_completo, $email, $senha, $nascimento, $veri , $tipo, $telefone=null){
 
 $this->nome_completo = $nome_completo;
 $this->email = $email;
@@ -88,11 +97,12 @@ $this->senha = $senha;
 $this->nascimento = $nascimento;
 $this->telefone = $telefone;
 $this->veri = $veri;
+$this->tipo = $tipo;
 
 }
 
 public function Exibir(){
-    return "Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Data de nascimento: $this->nascimento <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
+    return "<h1> $this->tipo </h1> Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Data de nascimento: $this->nascimento <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
 }
 
 public function Confirme($veri){
@@ -113,11 +123,4 @@ if($conf == true){
     
 }
 
-$objusario = new Usuario("Eduardo", "edu@gmail.com", "1803", "18/03/2003", "sim", 81985624197);
-$objendereco = new Endereco("54240-030", "Rua 04", "Curado I", "Jaboatão", 75, "PE", "Brasil", "C");
-$objusario->setEndereco($objendereco->ResumoEndereco());
-echo $objusario->Exibir();
-$objusario->Confirme($objusario->getVeri());
-echo $objusario->Validado($objusario->getConf());
-$objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
 ?>

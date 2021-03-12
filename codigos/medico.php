@@ -1,6 +1,7 @@
 <?php
+require "usuario.php";
 
-class Medico{
+class Medico extends Usuario{
 
 public $especialidade;
 public $anos_prof;
@@ -73,6 +74,14 @@ public function ValidDrt($drt){
 }
 
 } 
+$objusario = new Usuario("Dr. Drauzio", "drdrauzio@gmail.com", "1234", "22/08/1953", "sim", "Médico", 81985624197);
+$objendereco = new Endereco("54340-040", "Rua das Flores", "Madalena", "Recife", 105, "PE", "Brasil", "Ap 18");
+$objusario->setEndereco($objendereco->ResumoEndereco());
+echo $objusario->Exibir();
+$objusario->Confirme($objusario->getVeri());
+echo $objusario->Validado($objusario->getConf());
+$objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
+echo "<hr>";
 $objmedico = new Medico ("Clínico geral", 25, "Segunda", 541865);
 echo $objmedico->Exibir();
 echo"<br>";

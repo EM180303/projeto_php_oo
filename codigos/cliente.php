@@ -1,6 +1,7 @@
 <?php
+require "usuario.php";
 
-class Cliente{
+class Cliente extends Usuario{
 
     public $plano;
     public $apelido;
@@ -88,7 +89,14 @@ public function Validando($valid){
 }
 
 }
-
+$objusario = new Usuario("Eduardo", "edu@gmail.com", "1803", "18/03/2003", "sim", "Cliente", 81985624197);
+$objendereco = new Endereco("54240-030", "Rua 04", "Curado I", "Jaboatão", 75, "PE", "Brasil", "C");
+$objusario->setEndereco($objendereco->ResumoEndereco());
+echo $objusario->Exibir();
+$objusario->Confirme($objusario->getVeri());
+echo $objusario->Validado($objusario->getConf());
+$objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
+echo "<hr>";
 $objcliente = new Cliente("Saude Plus", "Edu", "0", "sim");
 echo $objcliente->Exibir();
 echo "<br>";
