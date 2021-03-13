@@ -25,50 +25,23 @@
 
 <body>
 
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="mp4/bg.mp4" type="video/mp4">
-  </video>
+<div class="overlay" style="background-color: #31e1b8"></div>
 
   <div class="masthead">
-    <div class="masthead-bg"></div>
+    <div class="masthead-bg" style="background-color: #F8F8FF"></div>
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-12 my-auto">
-          <div class="masthead-content text-white py-5 py-md-0">
-            <h1 class="mb-3">Coming Soon!</h1>
-            <p class="mb-5">We're working hard to finish the development of this site. Our target launch date is
-              <strong>January 2022</strong>! Sign up for updates using the form below!</p>
+          <div class="masthead-content text-white py-5 py-md-0" >
+            <h1 class="mb-3" style="color: #4F4F4F">Bem vindo á Policlínica Hope!</h1>
+            <p class="mb-5" style="color: #000000">Centro médico sempre preparado para lhe atende, da melhor maneira.
+            </p>
             <div class="input-group input-group-newsletter">
-              <input type="email" class="form-control" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="submit-button">
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" id="submit-button">Notify Me!</button>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="social-icons">
-    <ul class="list-unstyled text-center mb-0">
-      <li class="list-unstyled-item">
-        <a href="#">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-      <li class="list-unstyled-item">
-        <a href="#">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </li>
-      <li class="list-unstyled-item">
-        <a href="#">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </li>
-    </ul>
   </div>
 
   <!-- Bootstrap core JavaScript -->
