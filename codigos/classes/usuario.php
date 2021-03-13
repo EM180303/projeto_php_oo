@@ -105,10 +105,14 @@ public function Exibir(){
     return "<h1> $this->tipo </h1> Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Data de nascimento: $this->nascimento <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
 }
 
+public function Exibdir(){
+    return "<h1> $this->tipo </h1>";
+}
+
 public function Confirme($veri){
 if($veri == "sim"){
     $this->conf = true;
-}else{
+}else{ 
     $this->conf = false;
 }
 }

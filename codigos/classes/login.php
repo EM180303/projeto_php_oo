@@ -1,6 +1,8 @@
 <?php
 
-class Login{
+require "menssagem.php";
+
+class Login extends Menssagem{
 
 public $email;
 public $senha;
@@ -46,18 +48,16 @@ public function LoginOk($email, $senha){
     }
 }
 */
-
-public function Validar($validacao){
-    if($validacao == true){
-        return "Login aprovado";
-    }
-    else{
-        return "Falha";
-    }
-}
-
 public function Exibir(){
     return "Email: $this->email <br> Senha: $this->senha";
+}
+
+function mostrarM($parametro){
+if($parametro){
+    return "Login aprovado";
+}else{
+    return "Falha"; 
+}
 }
 
 }
@@ -65,6 +65,6 @@ public function Exibir(){
 $objlogin = new Login("edu@gmail.com", "1803", true);
 echo $objlogin->Exibir();
 echo "<br>";
-echo $objlogin->Validar($objlogin->getValidacao());
+echo $objlogin->mostrarM($objlogin->getValidacao());
 
 ?>

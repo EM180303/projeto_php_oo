@@ -4,7 +4,7 @@ require "usuario.php";
 class Cliente extends Usuario{
 
     public $plano;
-    public $apelido;
+    public $apelido; 
     public $consulta;
     public $num_consultas;
     public $valid;

@@ -8,6 +8,7 @@ public $anos_prof;
 public $dias_q_trabalha;
 public $consulta;
 public $drt;
+public $veri;
 
 
 //set
@@ -32,6 +33,11 @@ public function setDrt($drt){
     $this->drt = $drt;
 }
 
+public function setVeri1($veri){
+    $this->veri = $veri;
+}
+
+
 //get
 public function getEspecialidade(){
     return $this->especialidade;
@@ -49,6 +55,10 @@ public function getDrt(){
    return $this->drt;
 }
 
+public function getVeri1(){
+    return $this->veri;
+ }
+
 
 public function __construct($especialidade, $anos_prof, $dias_q_trabalha, $drt, $consulta = null)
 {
@@ -64,12 +74,29 @@ public function Exibir(){
 }
 
 //vendo se o drt consta em nossos arquivos
+
 public function ValidDrt($drt){
-    $veri = true; //simulando verificação no bd
+    //buscar drt no bd
+    $this->veri = true; //caso encontre
+    /*
+    $this->veri1 = false; se não encontrar 
+    */
+}
+
+public function Confirme($veri)
+{
+  
     if($veri){
         echo"Drt confirmado";
     }else{
         echo"Drt falso";
+    }
+
+}
+
+public function Exibdirtipo($tipo){
+    if($tipo == "Médico"){
+        echo "<h1> Médico </h1>";
     }
 }
 
@@ -86,5 +113,7 @@ $objmedico = new Medico ("Clínico geral", 25, "Segunda", 541865);
 echo $objmedico->Exibir();
 echo"<br>";
 $objmedico->ValidDrt($objmedico->getDrt());
+$objmedico->Confirme($objmedico->getVeri());
+$objmedico->Exibdirtipo($objusario->getTipo());
 
 ?>

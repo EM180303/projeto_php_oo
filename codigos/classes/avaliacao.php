@@ -1,6 +1,8 @@
 <?php
 
-class Avaliacao{
+require "menssagem.php";
+
+class Avaliacao extends Menssagem{
 
 public $media;
 public $estrelas;
@@ -80,6 +82,14 @@ public function Exibir(){
     return "Sua avaliação: $this->estrelas <br> Média de avaliações: $this->media <br> Seu comentário: $this->comentario";
 }
 
+function mostrarM($parametro){
+    if($parametro){
+        return "Muito obrigado!";
+    }else{
+        return "ajude-nos a melhorar"; 
+    }
+    }
+
 }
 
 $objavaliacao = new Avaliacao(5, 13, 3, "Muito bom");
@@ -90,4 +100,6 @@ $objavaliacao->atribuindototalAvaliacao($objavaliacao->getTotalAvaliacao());
 $objavaliacao->calcMedia($objavaliacao->getTotal(), $objavaliacao->getTotalAvaliacao());
 
 echo $objavaliacao->Exibir();
+echo "<br>";
+echo $objavaliacao->mostrarM($objavaliacao->getEstrelas())
 ?>

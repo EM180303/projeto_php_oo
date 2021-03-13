@@ -6,7 +6,7 @@ class Recpecao extends Usuario{
 //atributos
 public $consultas;
 public $paciente;
-public $medico;
+public $medico; 
 public $pergunta;
 public $telefone;
 public $pergunta2;

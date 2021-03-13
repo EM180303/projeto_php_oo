@@ -1,5 +1,8 @@
 <?php
-class Consulta{
+
+require "menssagem.php";
+
+class Consulta extends Menssagem{
 
 protected $data;
 protected $hora;
@@ -62,21 +65,21 @@ public function Exibir(){
     return "Nome do paciente: $this->cliente <br> Data: $this->data <br> Hora: $this->hora <br> Medico: $this->medico";
 }
 
-public function PacienteLocal($pergunta){
+public function mostrarM($parametro){
     echo "<br>";
     echo"Consulta confrimada? ";
-    if($pergunta == "sim"){
+    if($parametro == "sim"){
         $veri = true;
-        echo"$pergunta";
+        echo"$parametro";
     }else{
         $veri = false;
-        echo"$pergunta";
+        echo"$parametro";
     }
 }
 
 }
 $objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dr. Dráuzio", "sim");
 echo $objconsulta->Exibir();
-$objconsulta->PacienteLocal($objconsulta->getPergunta());
+$objconsulta->mostrarM($objconsulta->getPergunta());
 
 ?>
