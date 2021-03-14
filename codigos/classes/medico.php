@@ -1,7 +1,8 @@
 <?php
 require "usuario.php";
+require "usuariointer.php";
 
-class Medico extends Usuario{
+class Medico extends Usuario implements UsuarioInter{
 
 public $especialidade;
 public $anos_prof;
@@ -33,7 +34,7 @@ public function setDrt($drt){
     $this->drt = $drt;
 }
 
-public function setVeri1($veri){
+public function setVeri($veri){
     $this->veri = $veri;
 }
 
@@ -55,7 +56,7 @@ public function getDrt(){
    return $this->drt;
 }
 
-public function getVeri1(){
+public function getVeri(){
     return $this->veri;
  }
 
@@ -103,17 +104,18 @@ public function Exibdirtipo($tipo){
 } 
 $objusario = new Usuario("Dr. Drauzio", "drdrauzio@gmail.com", "1234", "22/08/1953", "sim", "Médico", 81985624197);
 $objendereco = new Endereco("54340-040", "Rua das Flores", "Madalena", "Recife", 105, "PE", "Brasil", "Ap 18");
+$objmedico = new Medico ("Clínico geral", 25, "Segunda", 541865);
+
 $objusario->setEndereco($objendereco->ResumoEndereco());
+$objmedico->Exibdirtipo($objusario->getTipo());
 echo $objusario->Exibir();
 $objusario->Confirme($objusario->getVeri());
 echo $objusario->Validado($objusario->getConf());
 $objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
 echo "<hr>";
-$objmedico = new Medico ("Clínico geral", 25, "Segunda", 541865);
 echo $objmedico->Exibir();
 echo"<br>";
 $objmedico->ValidDrt($objmedico->getDrt());
 $objmedico->Confirme($objmedico->getVeri());
-$objmedico->Exibdirtipo($objusario->getTipo());
 
 ?>

@@ -1,7 +1,8 @@
 <?php
 require "usuario.php";
+require "usuariointer.php";
 
-class Recpecao extends Usuario{
+class Recpecao extends Usuario implements UsuarioInter{
 
 //atributos
 public $consultas;
@@ -11,6 +12,7 @@ public $pergunta;
 public $telefone;
 public $pergunta2;
 public $telefoneM;
+public $veri;
 
 //set
 public function setConsultas($consultas){
@@ -40,6 +42,10 @@ public function setPergunta2($pergunta2){
 
 public function setTelefoneM($telefoneM){
     $this->telefoneM = $telefoneM;
+}
+
+public function setVeri($veri){
+    $this->veri = $veri;
 }
 
 //get
@@ -72,6 +78,10 @@ public function getTelefoneM(){
     return $this->telefoneM;
 }
 
+public function getVeri(){
+    return $this->veri;
+ }
+
 public function __construct($paciente, $medico, $pergunta, $pergunta2, $telefoneM, $telefone = null)
 {
     $this->paciente = $paciente;
@@ -86,7 +96,7 @@ public function PacienteNoLocal($pergunta){
     echo "<br>";
     echo"O paciente $this->paciente já chegou? ";
     if($pergunta == "sim"){
-        echo"$pergunta";
+        echo"$pergunta"; 
     }else{
         echo"$pergunta";
         echo"<br> Ligue para ele: $this->telefone";
@@ -104,18 +114,38 @@ public function medicoNoLocal($pergunta2){
     }
 }
 
+public function Exibdirtipo($tipo){
+    if($tipo == "Recepção"){
+        echo "<h1> Recepção </h1>";
+    }
+}
+
+public function Confirme($veri)
+{
+    if($veri){
+        echo"Dados da consulta ok";
+    }else{
+        echo"Erro nos dados";
+    }
+}
+
 }
 
 $objusario = new Usuario("Cremildo", "recepcao1@gmail.com", "2222", "11/01/2000", "sim", "Recepção");
 $objendereco = new Endereco("54450-010", "Avenida Brasil", "Boa Vista", "Recife", 2047, "PE", "Brasil", "Ap 5");
+$objrecepcao = new Recpecao("Eduardo", "Dr. Dráuzio", "sim", "não", 81987027519);
 $objusario->setEndereco($objendereco->ResumoEndereco());
+$objrecepcao->Exibdirtipo($objusario->getTipo());
 echo $objusario->Exibir();
 $objusario->Confirme($objusario->getVeri());
 echo $objusario->Validado($objusario->getConf());
 $objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
 echo "<hr>";
-$objrecepcao = new Recpecao("Eduardo", "Dr. Dráuzio", "sim", "não", 81987027519);
 $objrecepcao->medicoNoLocal($objrecepcao->getPergunta2());
 $objrecepcao->PacienteNoLocal($objrecepcao->getPergunta());
+echo"<br>";
+$objrecepcao->setVeri(true);
+$objrecepcao->Confirme($objrecepcao->getVeri());
+echo"<br>";
 
 ?>

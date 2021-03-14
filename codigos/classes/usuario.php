@@ -2,6 +2,7 @@
 
 require "endereco.php" ;
 
+
 class Usuario{
 
 public $nome_completo;
@@ -102,11 +103,7 @@ $this->tipo = $tipo;
 }
 
 public function Exibir(){
-    return "<h1> $this->tipo </h1> Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Data de nascimento: $this->nascimento <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
-}
-
-public function Exibdir(){
-    return "<h1> $this->tipo </h1>";
+    return "Nome: $this->nome_completo <br> Email: $this->email <br> Senha: $this->senha <br> Data de nascimento: $this->nascimento <br> Telefone: $this->telefone <br> - Endereço - <br> ". $this->endereco;
 }
 
 public function Confirme($veri){
