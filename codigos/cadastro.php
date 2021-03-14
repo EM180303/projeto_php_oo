@@ -38,17 +38,40 @@
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
+						Cadastro
 					</span>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Coloque seu nome e sobrenome">
+						<input class="input100" type="text" name="name" placeholder="Nome e sobre nome">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Coloque seu nome e sobre CEP">
+						<input class="input100" type="text" name="cep" placeholder="CEP">
+						<span class="focus-input100"data-placeholder="&#xf196;"></span>
+					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Coloque seu email">
 						<input class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+						<span class="focus-input100" data-placeholder="&#xf291;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Coloque sua senha">
 						<input class="input100" type="password" name="pass" placeholder="Senha">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+					
+					<h4 style="color: #F8F8FF;">Função:</h4>
+                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
+                    <input type="radio" name="função" value="Cliente">Cliente
+					</div>
+
+					<div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
+                    <input type="radio" name="função" value="Médico">Médico
+					</div>
+
+					<div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
+                    <input type="radio" name="função" value="Recepção">Recepção
 					</div>
 
 					<div class="contact100-form-checkbox">
@@ -60,13 +83,13 @@
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Entrar
+							Cadastrar
 						</button>
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="cadastro.php">
-							Cadastre-se
+						<a class="txt1" href="index.php">
+							Já possi um cadastro? Então faça login
 						</a>
 					</div>
 				</form>
