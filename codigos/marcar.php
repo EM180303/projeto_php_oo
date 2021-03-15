@@ -57,7 +57,25 @@
 					</div>
 
                     <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
-                    <input type="radio" name="especialidade" value="Neuroista">Neuroista
+                    <input type="radio" name="especialidade" value="Neuroista">Neurologista
+					</div>
+
+					<h4 style="color: #F8F8FF;">Plano:</h4>
+                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Especialidadede">
+                    <input type="radio" name="plano" value="Life Saúde">Life Saúde
+					</div>
+
+                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
+                    <input type="radio" name="plano" value="Real Sáude">Real Sáude
+					</div>
+
+                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
+                    <input type="radio" name="plano" value="Saúde Plues">Saúde Plues
+					</div>
+
+					
+                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
+                    <input type="radio" name="plano" value="Particular">Particular
 					</div>
 
 					<div class="container-login100-form-btn">

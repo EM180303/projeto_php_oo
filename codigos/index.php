@@ -32,7 +32,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form action="home.php" class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i><img src="imagens/logoHope.png" alt="Logo Hopw" height="110px"></i>
 					</span>

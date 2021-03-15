@@ -42,11 +42,11 @@
 					</span>
 
 					<div class="container-login100-form-btn">
-						<a href="">
+						
                             <button class="login100-form-btn">
-                                Marcar consulta
+							<a href="marcar.php">   Marcar consulta </a>
                             </button>
-                        </a>
+                       
 					</div>
 
                     <br>
