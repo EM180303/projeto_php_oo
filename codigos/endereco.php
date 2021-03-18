@@ -9,7 +9,6 @@ protected $numero_resi;
 protected $complemento;
 protected $cidade;
 protected $estado;  
-protected $uf;
 
 //set
 public function setCep($cep){
@@ -38,10 +37,6 @@ public function setCidade($cidade){
 
 public function setEstado($estado){
     $this->estado = $estado;
-}
-
-public function setUf($uf){
-    $this->uf = $uf;
 }
 
 //get
@@ -73,11 +68,7 @@ public function getEstado(){
     return $this->estado;
 }
 
-public function getUf(){
-   return $this->uf;
-}
-
-public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $estado, $uf,  $complemento = null)
+public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $estado, $complemento = null)
 {
     $this->cep = $cep;
     $this->rua = $rua;
@@ -86,15 +77,15 @@ public function __construct($cep, $rua, $bairro, $cidade, $numero_resi, $estado,
     $this->numero_resi = $numero_resi;
     $this->complemento = $complemento;
     $this->estado = $estado;
-    $this->uf = $uf;
+   
 }
 
 public function ResumoEndereco(){
-    return "CEP: $this->cep <br> Rua: $this->rua <br> Residênsia: $this->numero_resi - $this->complemento <br> Bairro: $this->bairro <br> Cidade: $this->cidade <br> Estado: $this->estado <br> País: $this->uf <br>";
+    return "CEP: $this->cep <br> Rua: $this->rua <br> Residênsia: $this->numero_resi - $this->complemento <br> Bairro: $this->bairro <br> Cidade: $this->cidade <br> Estado: $this->estado <br>";
 }
 
-public function Distancia($uf, $estado){
-    if(($uf != "Brasil") or ($estado != "PE")){
+public function Distancia($estado){
+    if($estado != "PE"){
         echo "Aconcelhamos que procure uma das nossas clinicas mais proximas de você!";
     }
 }

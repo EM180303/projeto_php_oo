@@ -122,17 +122,22 @@
 						<span class="focus-input100" data-placeholder="&#xf291;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Coloque seu número de telefone">
-						<input class="input100" type="text" name="telefone" placeholder="Telefone">
-						<span class="focus-input100" data-placeholder="&#xf291;"></span>
-					</div>
-
 					<div class="wrap-input100 validate-input" data-validate="Coloque sua senha">
 						<span class="btn-show-pass">
 							<i class="fa fa fa-eye"></i>
 						</span>
 						<input class="input100" type="password" name="pass" placeholder="Senha">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Coloque seu número de telefone">
+						<input class="input100" type="text" name="telefone" placeholder="Telefone">
+						<span class="focus-input100" data-placeholder="&#xf291;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Coloque sua data de nascimento">
+						<input class="input100" type="date" name="nascimento" placeholder="Nascimento">
+						<span class="focus-input100" data-placeholder="&#xf245;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Coloque seu CEP">

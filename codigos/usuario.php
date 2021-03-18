@@ -5,6 +5,7 @@ require "endereco.php" ;
 
 class Usuario{
 
+public $id;
 public $nome_completo;
 public $email;
 private $senha;
