@@ -112,6 +112,14 @@
 						Cadastro
 					</span>
 
+					<?php if (isset($_GET['login']) && $_GET['login'] == 'igual') { ?>
+						<div class="text-danger">
+						Tente novamente com um email diferente!
+						</div>
+					<?php } ?>
+
+					<br>
+
                     <div class="wrap-input100 validate-input" data-validate = "Coloque seu nome e sobrenome">
 						<input class="input100" type="text" name="name" placeholder="Nome e sobre nome">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
@@ -123,16 +131,13 @@
 					</div>
  
 					<div class="wrap-input100 validate-input" data-validate="Coloque sua senha">
-						<span class="btn-show-pass">
-							<i class="fa fa fa-eye"></i>
-						</span>
 						<input class="input100" type="password" name="pass" placeholder="Senha">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Coloque seu número de telefone">
 						<input class="input100" type="text" name="telefone" placeholder="Telefone">
-						<span class="focus-input100" data-placeholder="&#xf291;"></span>
+						<span class="focus-input100" data-placeholder="&#xf290;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Coloque sua data de nascimento">
