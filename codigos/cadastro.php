@@ -121,7 +121,7 @@
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100" data-placeholder="&#xf291;"></span>
 					</div>
-
+ 
 					<div class="wrap-input100 validate-input" data-validate="Coloque sua senha">
 						<span class="btn-show-pass">
 							<i class="fa fa fa-eye"></i>

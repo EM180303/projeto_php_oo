@@ -1,3 +1,7 @@
+<?php
+require "valid_navg.php"
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -85,7 +89,7 @@
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="index.php">
+						<a class="txt1" href="logoff.php">
 							Mudar conta
 						</a>
 					</div>

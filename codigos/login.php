@@ -12,7 +12,7 @@ public $validacao;
 public function setEmail($email){
     $this->email = $email;
 }
-
+ 
 public function setSenha($senha){
     $this->senha = $senha;
 }

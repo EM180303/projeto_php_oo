@@ -26,13 +26,13 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-</head>
+</head> 
 <body>
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
-				<form action="home.php" class="login100-form validate-form">
+				<form action="valid_login.php" method="POST" class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i><img src="imagens/logoHope.png" alt="Logo Hopw" height="110px"></i>
 					</span>
@@ -58,6 +58,19 @@
 						</label>
 					</div>
 
+					<?php if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+						<div class="text-danger">
+						Email ou senha inválidos!
+						</div>
+					<?php } ?>
+
+					
+					<?php if (isset($_GET['login']) && $_GET['login'] == 'erro1') { ?>
+						<div class="text-danger">
+						Faça o login para acessar!
+						</div>
+					<?php } ?>
+
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Entrar
@@ -67,6 +80,12 @@
 					<div class="text-center p-t-90">
 						<a class="txt1" href="cadastro.php">
 							Cadastre-se
+						</a>
+					</div>
+
+					<div class="text-center p-t-90">
+						<a class="txt1" href="logoff.php">
+							Deslogar
 						</a>
 					</div>
 				</form>
