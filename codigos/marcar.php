@@ -36,7 +36,7 @@ require "valid_navg.php"
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form action="consulta.php" method="POST" class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i><img src="imagens/logoHope.png" alt="Logo Hopw" height="110px"></i>
 					</span>
@@ -51,36 +51,50 @@ require "valid_navg.php"
 						<span class="focus-input100" data-placeholder="&#xf197;"></span>
 					</div>
 
-                    <h4 style="color: #F8F8FF;">Especialidade:</h4>
-                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Especialidadede">
-                    <input type="radio" name="especialidade" value="Cárdiologista">Cárdiologista
-					</div>
+<div class="row">
+            <div class="col-12 form-group mt-3 ">
+            <label style="color: #F8F8FF;">Escolha especialidade e o médico: </label>
+            <br>
+            <select name="medico" id="medico" class="form-select">
+            <optgroup label="Cardiologista">
+                <option value="Dr. Cremildo Silva">Dr. Cremildo Silva</option>
+                <option value="Dr. Dráuzio Varela">Dr. Dráuzio Varela</option>
+				<option value="Dr. Ted Mosby">Dr. Ted Mosby</option>
+            </optgroup>
+			<optgroup label="Ortopedista">
+                <option value="Dr. Anderson Silva">Dr. Anderson Silva</option>
+                <option value="Dr. Marcus Reus">Dr. Marcus Reus</option>
+                <option value="Dr. Neymar Jr.">Dr. Neymar Jr.</option>
+            </optgroup>
+            <optgroup label="Neurologista">
+                <option value="Dr. Barney Stenson">Dr. Barney Stenson</option>
+                <option value="Dr. Felipe Melo">Dr. Felipe Melo</option>
+                <option value="Dr. Homer J. Simpson">Dr. Homer J. Simpson</option>
+            </optgroup>
+            </select>
+            <div class="validate"></div>
+        </div> 
+            </div>
 
-                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
-                    <input type="radio" name="especialidade" value="Ortopedidta">Ortopedista
-					</div>
-
-                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
-                    <input type="radio" name="especialidade" value="Neuroista">Neurologista
-					</div>
-
-					<h4 style="color: #F8F8FF;">Plano:</h4>
-                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Especialidadede">
-                    <input type="radio" name="plano" value="Life Saúde">Life Saúde
-					</div>
-
-                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
-                    <input type="radio" name="plano" value="Real Sáude">Real Sáude
-					</div>
-
-                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
-                    <input type="radio" name="plano" value="Saúde Plues">Saúde Plues
-					</div>
-
-					
-                    <div style="color: #F8F8FF;" class="wrap-input100 validate-input" data-validate="Funçaõ">
-                    <input type="radio" name="plano" value="Particular">Particular
-					</div>
+			<div class="row">
+            <div class="col-12 form-group mt-3 ">
+            <label style="color: #F8F8FF;">Selecione a forma de pagamento ou plano:</label>
+            <br>
+            <select name="pagamento" id="pagamento" class="form-select">
+            <optgroup label="Planos">
+                <option value="Life Saúde">Life Saúde</option>
+                <option value="Real Saúde Empresarial">Real Saúde Empresarial</option>
+                <option value="Saúde Plus"Saúde Plus>Saúde Plus</option>
+            </optgroup>
+            <optgroup label="Particular">
+                <option value="Crédito">Crédito</option>
+                <option value="Débito">Débito</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </optgroup>
+            </select>
+            <div class="validate"></div>
+        </div> 
+            </div>
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">

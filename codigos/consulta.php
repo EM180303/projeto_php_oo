@@ -1,22 +1,19 @@
 <?php
 
 require "menssagem.php";
+session_start();
 
 class Consulta extends Menssagem{
 
 protected $data;
-protected $hora;
 protected $medico;
 protected $cliente;
+protected $plano;
 public $pergunta;
     
 //set
 public function setData($data){
     $this->data = $data;
-}
-
-public function setHora($hora){
-    $this->hora = $hora;
 }
 
 public function setMedico($medico){
@@ -31,6 +28,10 @@ public function setPergunta($pergunta){
     $this->pergunta = $pergunta;
 }
 
+public function setPlano($plano){
+    $this->plano = $plano;
+}
+
 //get
 public function getCliente(){
     return $this->cliente;
@@ -38,10 +39,6 @@ public function getCliente(){
 
 public function getData(){
     return $this->data;
-}
-
-public function getHora(){
-    return $this->hora;
 }
 
 public function getMedico(){
@@ -52,17 +49,21 @@ public function getPergunta(){
     return $this->pergunta;
 }
 
-public function __construct($cliente, $data, $hora, $medico, $pergunta)
+public function getPlano(){
+    return $this->plano;
+}
+
+public function __construct($cliente, $data, $medico, $pergunta, $plano)
 {
     $this->cliente = $cliente;
-    $this->data = $data;
-    $this->hora = $hora; 
+    $this->data = $data; 
     $this->medico = $medico;
     $this->pergunta = $pergunta;
+    $this->plano = $plano;
 }
 
 public function Exibir(){
-    return "Nome do paciente: $this->cliente <br> Data: $this->data <br> Hora: $this->hora <br> Medico: $this->medico";
+    return "Nome do paciente: $this->cliente <br> Forma de pagamento ou plano: $this->plano <br> Data: $this->data <br> Medico: $this->medico";
 }
 
 public function mostrarM($parametro){
@@ -78,8 +79,7 @@ public function mostrarM($parametro){
 }
 
 }
-$objconsulta = new Consulta("Edu", "22/08/2021", "14:00", "Dr. Dráuzio", "sim");
+$objconsulta = new Consulta($_SESSION['nome'], $_POST['data'], $_POST['medico'], "sim", $_POST['pagamento']);
 echo $objconsulta->Exibir();
-$objconsulta->mostrarM($objconsulta->getPergunta());
 
 ?>
