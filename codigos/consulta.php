@@ -1,5 +1,6 @@
 <?php
 
+require "conexao.php";
 require "menssagem.php";
 session_start();
 
@@ -78,8 +79,24 @@ public function mostrarM($parametro){
     }
 }
 
+public function marcar($conect){
+
+    $stmt = $conect ->prepare("INSERT INTO consultas (hope_co_id,hope_co_paciente,hope_co_medico,hope_co_data,hope_ca_pagamento) VALUES (?,?,?,?,?)");
+    $stmt->bind_param("issss", $_SESSION['idusuario'], $_SESSION['nome'], $_POST['medico'], $_POST['data'], $_POST['pagamento']);
+    $stmt->execute();         
+
+    
+
+  echo ( "<script>
+        window.alert ('Consulta realizada com sucesso!')
+        window.location.href = 'home.php';
+    </script> " );
+
+}
+
 }
 $objconsulta = new Consulta($_SESSION['nome'], $_POST['data'], $_POST['medico'], "sim", $_POST['pagamento']);
-echo $objconsulta->Exibir();
+$objconsulta->marcar($conect);
+$conect->close();
 
 ?>

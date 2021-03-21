@@ -6,7 +6,7 @@ class Cadastrar{
 
 public function inserir($conect){
 
-	session_start();
+session_start();
 
 $email = $_POST['email'];
 $query_ = "SELECT * FROM cadastro WHERE hope_ca_email ='$email'";
