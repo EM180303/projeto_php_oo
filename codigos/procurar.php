@@ -36,28 +36,79 @@ require "valid_navg.php"
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form action="buscar.php" method="POST" class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i><img src="imagens/logoHope.png" alt="Logo Hopw" height="110px"></i>
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Menu
+						Buscar por consulta
 					</span>
 
-					<div class="container-login100-form-btn">
-						
-                            <button  class="login100-form-btn">
-							<a href="marcar.php">Marcar consulta </a>
-                            </button>
-                       
+					<p style="color: #F8F8FF;">Só precisa preencher um dos campos, mas pode preencher todos</p>
+
+					<br>
+
+            <label style="color: #F8F8FF;">Busque pela data da consulta:</label>
+            <div class="wrap-input100">
+						<input class="input100" type="date" name="data" placeholder="Data">
+						<span class="focus-input100" data-placeholder="&#xf245;"></span>
 					</div>
+                    <label style="color: #F8F8FF;">Busque pelo nome do paciente:</label>
+                    <div class="wrap-input100">
+						<input class="input100" type="text" name="nome" placeholder="Nome do paciente">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+<div class="row">
+            <div class="col-12 form-group mt-3 ">
+            <label style="color: #F8F8FF;">Busque pelo nome do médico: </label>
+            <br>
+            <select name="medico" id="medico" class="form-select">
+            <option value=""></option>
+            <optgroup label="Cardiologista">
+                <option value="Dr. Cremildo Silva">Dr. Cremildo Silva</option>
+                <option value="Dr. Dráuzio Varela">Dr. Dráuzio Varela</option>
+				<option value="Dr. Ted Mosby">Dr. Ted Mosby</option>
+            </optgroup>
+			<optgroup label="Ortopedista">
+                <option value="Dr. Anderson Silva">Dr. Anderson Silva</option>
+                <option value="Dr. Marcus Reus">Dr. Marcus Reus</option>
+                <option value="Dr. Neymar Jr.">Dr. Neymar Jr.</option>
+            </optgroup>
+            <optgroup label="Neurologista">
+                <option value="Dr. Barney Stenson">Dr. Barney Stenson</option>
+                <option value="Dr. Felipe Melo">Dr. Felipe Melo</option>
+                <option value="Dr. Homer J. Simpson">Dr. Homer J. Simpson</option>
+            </optgroup>
+            </select>
+            <div class="validate"></div>
+        </div> 
+            </div>
 
-                    <br>
+			<div class="row">
+            <div class="col-12 form-group mt-3 ">
+            <label style="color: #F8F8FF;">Busque pela forma de pagamento ou plano:</label>
+            <br>
+            <select name="pagamento" id="pagamento" class="form-select">
+            <option value=""></option>
+            <optgroup label="Planos">
+                <option value="Life Saúde">Life Saúde</option>
+                <option value="Real Saúde Empresarial">Real Saúde Empresarial</option>
+                <option value="Saúde Plus"Saúde Plus>Saúde Plus</option>
+            </optgroup>
+            <optgroup label="Particular">
+                <option value="Crédito">Crédito</option>
+                <option value="Débito">Débito</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </optgroup>
+            </select>
+            <div class="validate"></div>
+        </div> 
+            </div>
 
-                    <div class="container-login100-form-btn">
+					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-						<a href="procurar.php">Ver consulta </a>
+							Buscar
 						</button>
 					</div>
 

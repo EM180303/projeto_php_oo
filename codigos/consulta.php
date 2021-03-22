@@ -88,7 +88,7 @@ public function marcar($conect){
     
 
   echo ( "<script>
-        window.alert ('Consulta realizada com sucesso!')
+        window.alert ('Consulta marcada com sucesso!')
         window.location.href = 'home.php';
     </script> " );
 
