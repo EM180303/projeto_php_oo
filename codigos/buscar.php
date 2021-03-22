@@ -24,14 +24,18 @@ $query_ = "SELECT * FROM consultas WHERE hope_co_paciente = '$nome' OR hope_co_m
 $resultado = $conect->query($query_);
 if($resultado->num_rows > 0){
     while($row = $resultado->fetch_assoc()){
+
+        echo $this->consultas[] = "Paciente: ".$row['hope_co_paciente'] . " || Medico: Dr. " . $row['hope_co_medico'] . " || Data: " . $row['hope_co_data'] . " || Plano ou pagamento: " . $row['hope_co_pagamento'] ."<br>";
         
-        echo ("<script>
+    }
+
+    echo ("<script>
         window.alert('Resultado da busca')
         window.location.href='exibir.php';
         </script>");
-        return $this->consultas[] = "Paciente: ".$row['hope_co_paciente'] . " || Medico: Dr. " . $row['hope_co_medico'] . " || Data: " . $row['hope_co_data'] . " || Plano ou pagamento: " . $row['hope_co_pagamento'];
-        
-    }
+
+    return  $this->consultas;
+
 } else{
     echo ("<script>
           window.alert('Não encontramos nenhuma consulta, tente novamente')
@@ -42,7 +46,6 @@ if($resultado->num_rows > 0){
 }
 
 $objbuscar = new Buscar;
-$objbuscar->Select($conect);
-array_push($_SESSION['consultas'],$objbuscar->Select($conect));
-print_r($_SESSION['consultas'])
+$_SESSION['consultas']=$objbuscar->Select($conect);
+
 ?>

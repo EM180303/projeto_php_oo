@@ -48,18 +48,16 @@ require "valid_navg.php";
 					<div class="container-login100-form-btn">
 						
                     <?php
-                 if(isset($_SESSION['consultas'])) { 
-                    /*
-                    foreach ($_SESSION['consultas'] as $key => $value) :
-                        
-                        echo '<p>Produto: '.$value['produto'].' | Quantidade: '.$value['quantidade'].' | Preço do produto: R$ '.$value['valor'].' | Valor a ser pago: R$ '.$pg.'</p>';
-                        echo '<hr>';                       
-                   
-                    endforeach;
-                    */
-                    print_r($_SESSION['consultas']);
-                 }
-               
+				
+				foreach ($_SESSION['consultas'] as $key => $value) :
+					
+					echo '<p>'.$value[].'</p>';
+					echo '<hr>';
+					
+				endforeach;	
+				
+				
+
                     ?>     
                        
 					</div>
