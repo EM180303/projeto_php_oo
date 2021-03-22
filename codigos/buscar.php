@@ -25,7 +25,7 @@ $resultado = $conect->query($query_);
 if($resultado->num_rows > 0){
     while($row = $resultado->fetch_assoc()){
 
-        echo $this->consultas[] = "Paciente: ".$row['hope_co_paciente'] . " || Medico: Dr. " . $row['hope_co_medico'] . " || Data: " . $row['hope_co_data'] . " || Plano ou pagamento: " . $row['hope_co_pagamento'] ."<br>";
+        $this->consultas[] = "Paciente: ".$row['hope_co_paciente'] . " || Medico: Dr. " . $row['hope_co_medico'] . " || Data: " . $row['hope_co_data'] . " || Plano ou pagamento: " . $row['hope_co_pagamento'] ."<br>";
         
     }
 

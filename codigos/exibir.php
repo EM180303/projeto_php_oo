@@ -49,15 +49,12 @@ require "valid_navg.php";
 						
                     <?php
 				
-				foreach ($_SESSION['consultas'] as $key => $value) :
 					
-					echo '<p>'.$value[].'</p>';
+				for ($i = 0, $size = count($_SESSION['consultas']); $i < $size; ++$i){
+					echo ('<p style="color: #F8F8FF;">'.$_SESSION['consultas'][$i].'</p>');
 					echo '<hr>';
+					}
 					
-				endforeach;	
-				
-				
-
                     ?>     
                        
 					</div>

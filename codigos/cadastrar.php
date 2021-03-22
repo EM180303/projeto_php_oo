@@ -43,7 +43,11 @@ if($resultado->num_rows > 0) {
 				window.location.href='cadastroMedico.php';
 				</script>");
     }else{
-		c
+      echo ("<script>
+      window.alert('Cadastro realizado com sucesso!')
+      window.location.href='home.php';
+  </script>");  
+  
     }
 
 	}
