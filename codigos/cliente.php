@@ -104,7 +104,7 @@ $objcliente->Exibdirtipo($objusario->getTipo());
 echo $objusario->Exibir();
 $objusario->Confirme($objusario->getVeri());
 echo $objusario->Validado($objusario->getConf());
-$objusario->setEndereco($objendereco->Distancia($objendereco->getUf(), $objendereco->getEstado()));
+$objusario->setEndereco($objendereco->Distancia($objendereco->getEstado()));
 echo "<hr>";
 echo $objcliente->Exibir();
 echo "<br>";

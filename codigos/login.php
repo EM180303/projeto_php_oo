@@ -41,13 +41,7 @@ public function __construct($email, $senha, $validacao)
     $this->senha = $senha;
     $this->validacao = $validacao;
 }
-/*Função para o bd
-public function LoginOk($email, $senha){
-    if(($email == email do bd) and ($senha == senha do bd)){
-        $this->validacao = true;
-    }
-}
-*/
+
 public function Exibir(){
     return "Email: $this->email <br> Senha: $this->senha";
 }

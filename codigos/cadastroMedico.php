@@ -1,7 +1,3 @@
-<?php
-require "valid_navg.php"
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,40 +26,55 @@ require "valid_navg.php"
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-</head>
+</head> 
 <body>
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form action="medico.php" method="POST" class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i><img src="imagens/logoHope.png" alt="Logo Hopw" height="110px"></i>
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Menu
+						Cadastro Médico
 					</span>
 
-					<div class="container-login100-form-btn">
-						
-                            <button  class="login100-form-btn">
-							<a href="marcar.php">Marcar consulta </a>
-                            </button>
-                       
+					<div class="wrap-input100 validate-input" data-validate = "Informe seu CRM">
+						<input class="input100" type="text" name="crm" placeholder="CRM">
+						<span class="focus-input100" data-placeholder="&#xf297;"></span>
 					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Informe seus anos de profissão">
+						<input class="input100" type="number" name="anos" placeholder="Anos de profissão">
+						<span class="focus-input100" data-placeholder="&#xf298;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Informe qua é a sua especialidade">
+						<input class="input100" type="text" name="especialidade" placeholder="Especialidade">
+						<span class="focus-input100" data-placeholder="&#xf319;"></span>
+					</div>
+
+                    <p style="color: #F8F8FF;">Registramos seus dados no nosso banco de dados. Entraremos em contato para uma possível oferta de emprego.</p>
 
                     <br>
 
-                    <div class="container-login100-form-btn">
+					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-						<a href="exibir.php">Ver consulta </a>
+							Finalizar
 						</button>
 					</div>
 
 					<div class="text-center p-t-90">
+						<a class="txt1" href="cadastro.php">
+							Cadastre-se
+						</a>
+					</div>
+
+					<div class="text-center p-t-90">
 						<a class="txt1" href="logoff.php">
-							Mudar conta
+							Deslogar
 						</a>
 					</div>
 				</form>

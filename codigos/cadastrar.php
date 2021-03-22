@@ -33,13 +33,18 @@ if($resultado->num_rows > 0) {
     $resultado = $conect->query($query_);
     while ($row = $resultado->fetch_assoc()) {
         $_SESSION['idusuario'] = $row['hope_ca_id'];
+        $_SESSION['nome'] = $row['hope_ca_nome'];
+        $_SESSION['validado'] = 'SIM';
     }
-    $_SESSION['validado'] = 'SIM';
 
-		echo ("<script>
-				window.alert('Cadastro realizado com sucesso!')
-				window.location.href='home.php';
+    if($_POST['função'] == "Médico"){
+      echo ("<script>
+				window.alert('Complete seu cadastro para trabalhar conosco!')
+				window.location.href='cadastroMedico.php';
 				</script>");
+    }else{
+		c
+    }
 
 	}
 }
