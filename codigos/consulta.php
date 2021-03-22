@@ -81,14 +81,14 @@ public function mostrarM($parametro){
 
 public function marcar($conect){
 
-    $stmt = $conect ->prepare("INSERT INTO consultas (hope_co_id,hope_co_paciente,hope_co_medico,hope_co_data,hope_ca_pagamento) VALUES (?,?,?,?,?)");
+    $stmt = $conect ->prepare("INSERT INTO consultas (hope_co_id,hope_co_paciente,hope_co_medico,hope_co_data,hope_co_pagamento) VALUES (?,?,?,?,?)");
     $stmt->bind_param("issss", $_SESSION['idusuario'], $_SESSION['nome'], $_POST['medico'], $_POST['data'], $_POST['pagamento']);
     $stmt->execute();         
 
     
 
   echo ( "<script>
-        window.alert ('Consulta marcada com sucesso!')
+        window.alert ('Consulta marcada com sucesso! Ligaremos para informar o horário')
         window.location.href = 'home.php';
     </script> " );
 

@@ -45,9 +45,9 @@ require "valid_navg.php"
 						Marcar consulta
 					</span>
 
-                    <h4 style="color: #F8F8FF;">Data e Hora:</h4>
-					<div class="wrap-input100 validate-input" data-validate = "Coloque seu email">
-						<input class="input100" type="datetime-local" name="data" placeholder="Data e Hora">
+                    <h4 style="color: #F8F8FF;">Data:</h4>
+					<div class="wrap-input100 validate-input" data-validate = "Coloque a data da consulta">
+						<input class="input100" type="date" name="data" placeholder="Data">
 						<span class="focus-input100" data-placeholder="&#xf197;"></span>
 					</div>
 
